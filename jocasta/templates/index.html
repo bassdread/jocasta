@@ -68,11 +68,7 @@
       </div> <!-- /container -->
 
     </main>
-
-    <footer class="container">
-      <p>&copy; Company 2017-2018</p>
-    </footer>
-
+    
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
@@ -84,27 +80,27 @@
     <script src="/static/js/raphael-2.1.4.min.js"></script>
     <script src="/static/js/justgage.js"></script>
     <script>
-  var temperature = new JustGage({
-    id: "temperature",
-    value: {{reading.temperature}},
-    min: 5,
-    max: 35,
-    title: "Temperature"
-  });
-  var humidity = new JustGage({
-    id: "humidity",
-    value: {{reading.humidity}},
-    min: 0,
-    max: 100,
-    title: "Humidity"
-  });
-  var light = new JustGage({
-    id: "light",
-    value: {{reading.light}},
-    min: 0,
-    max: 450,
-    title: "Light"
-  });
-</script>
+      var temperature = new JustGage({
+        id: "temperature",
+        value: {{reading.temperature}},
+        min: 5,
+        max: 35,
+        title: "Temperature"
+      });
+      var humidity = new JustGage({
+        id: "humidity",
+        value: {{reading.humidity}},
+        min: 0,
+        max: 100,
+        title: "Humidity"
+      });
+      var light = new JustGage({
+        id: "light",
+        value: {{reading.light}},
+        min: 0,
+        max: 450,
+        title: "Light"
+      });
+  </script>
   </body>
 </html>
