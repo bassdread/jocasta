@@ -44,23 +44,13 @@
       <div class="container">
         <!-- Example row of columns -->
         <div class="row">
-          <div class="col-md-4">
-            <h2 class="text-center">Temperature</h2>
-            <div id="temperature" class="200x160px"></div>
-            <p><a class="btn btn-secondary" href="/temperature" role="button">View details &raquo;</a></p>
+            <div class="col-md-2">
+            </div>
+          <div class="col-md-8">
+            <div id="gauge" style="width:600px; height:520px"></div>
           </div>
-
-          <div class="col-md-4">
-            <h2 class="text-center">Humidity</h2>
-            <div id="humidity" class="200x160px"></div>
-            <p><a class="btn btn-secondary" href="/humidity" role="button">View details &raquo;</a></p>
-          </div>
-
-          <div class="col-md-4">
-            <h2 class="text-center">Light</h2>
-            <div id="light" class="200x160px"></div>
-            <p><a class="btn btn-secondary" href="/light" role="button">View details &raquo;</a></p>
-          </div>
+            <div class="col-md-2">
+            </div>
         </div>
 
         <hr>
@@ -84,26 +74,12 @@
     <script src="/static/js/raphael-2.1.4.min.js"></script>
     <script src="/static/js/justgage.js"></script>
     <script>
-  var temperature = new JustGage({
-    id: "temperature",
+  var light = new JustGage({
+    id: "gauge",
     value: {{reading.temperature}},
     min: 5,
     max: 35,
     title: "Temperature"
-  });
-  var humidity = new JustGage({
-    id: "humidity",
-    value: {{reading.humidity}},
-    min: 0,
-    max: 100,
-    title: "Humidity"
-  });
-  var light = new JustGage({
-    id: "light",
-    value: {{reading.light}},
-    min: 0,
-    max: 450,
-    title: "Light"
   });
 </script>
   </body>

@@ -7,8 +7,27 @@ app = Flask(__name__)
 
 SENSOR = DataSensor()
 
+
+@app.route('/light')
+def light():
+    reading = SENSOR.read()
+    return render_template('light.html', reading=reading)
+
+
+@app.route('/humidity')
+def humidity():
+    reading = SENSOR.read()
+    return render_template('humidity.html', reading=reading)
+
+
+@app.route('/temperature')
+def temperature():
+    reading = SENSOR.read()
+    return render_template('temperature.html', reading=reading)
+
+
 @app.route('/')
-def hello():
+def index():
     reading = SENSOR.read()
     return render_template('index.html', reading=reading)
 
