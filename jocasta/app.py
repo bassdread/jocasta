@@ -52,7 +52,7 @@ def index():
 @app.route('/db')
 def index_db():
     cur = get_db().cursor()
-    cur.execute("SELECT * FROM readings LIMIT 1")
+    cur.execute("select * from readings ORDER BY date DESC LIMIT 1;")
     rv = cur.fetchall()[0]
     reading = {
         'humidity': rv[1],
